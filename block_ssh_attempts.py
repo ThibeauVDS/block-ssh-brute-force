@@ -1,17 +1,15 @@
 #!/usr/bin/python3
 
 #probeer te zoeken achter een string in dit geval invalid user
-search = "Invalid user"
 
-#ik open de file en open deze op read.
-file1 = open("sshdlog", "r")
-#ik maak van file1 iets gemakkelijker en ik zeg daar ook voor te lezen en de lijnen te splitten zodat het niet verticaal kwam (was bij mij een voorval)
-readfile = file1.read().split('/n')
-#ik zoek achter invalid user in mijn file (dit is nog niet volledig, ik zit hier vast.
-
-for line in readfile:
-    if search in line:
-        print()
+#ik zoek achter invalid user in mijn file (na veel verkeerd te hebben gezet en met veel opzoekwerk en veel proberen heb ik eindelijk alle invalid users er kunnen uithalen.
+#what a relief (ik heb hier echt op liggen vloeken....)
+with open("sshdlog", "r") as readfile:
+    for line in readfile:
+        line = line.strip()
+        search= "Invalid user"
+        if search in line:
+            print(line)
 
 #ik close de file.
-file1.close()
+readfile.close()
