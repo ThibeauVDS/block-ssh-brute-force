@@ -9,6 +9,7 @@ with open("sshdlog", "r") as readfile:
         line = line.strip()
         search= "Invalid user"
         if search in line:
+            line = line.split(" ")[10]
             print(line)
 
 #ik close de file.
