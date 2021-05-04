@@ -4,6 +4,7 @@
 
 #ik zoek achter invalid user in mijn file (na veel verkeerd te hebben gezet en met veel opzoekwerk en veel proberen heb ik eindelijk alle invalid users er kunnen uithalen.
 #what a relief (ik heb hier echt op liggen vloeken....)
+#ik heb een nieuwe lijn toegevoegd met split. hierin split ik elk woord en zie ik op welke plaats de ip adressen staan.
 with open("sshdlog", "r") as readfile:
     for line in readfile:
         line = line.strip()
