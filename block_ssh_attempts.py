@@ -10,8 +10,13 @@ with open("sshdlog", "r") as readfile:
         line = line.strip()
         search= "Invalid user"
         if search in line:
-            line = line.split(" ")[10]
-            print(line)
+            #ik split de string in een lijst.
+            line = line.split(" ")
 
-#ik close de file.
-readfile.close()
+            #ik draai de volgordevan de lijst om.
+            line.reverse()
+            #het IP Address staat altijd op de 3de plaats nu, dus deze selecteer ik.
+            result = line[2]
+            print(result)
+
+        
