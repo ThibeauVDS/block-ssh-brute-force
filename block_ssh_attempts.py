@@ -33,7 +33,6 @@ for ip in set(invalid_ips):
         print(ip, "has been blocked!")
 
 
-
 #print(fwblock.blocked) (controle middel)
 
    
